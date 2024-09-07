@@ -3,47 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Div and Paragraph</title>
+    <title>Position Paragraphs</title>
     <style>
-        body {
-            height: 80vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .center-content {
+        .container {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px; /* Adjust this as needed */
+            height: 100vh; /* Full viewport height */
+            justify-content: space-between; /* Distribute space between elements */
         }
-
-        div {
-            border: 1px solid #000;
-            padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        p {
-            margin: 0; /* Remove default margin */
+        .middle {
+            margin-top: auto; /* Pushes the middle elements down */
+            margin-bottom: auto; /* Pushes the middle elements up */
         }
     </style>
 </head>
-<body> 
-    <h1>Title</h1>
-    <br><br><br>
-    
-    <div class="center-content">
-        <p>This paragraph has equal space above and below.</p>
-    </div>
-    
-    <div>
-        <input type="text" placeholder="Enter text">
+<body>
+    <div class="container">
+        <p>Paragraph 1</p>
+        <div class="middle">
+            <p>Above the things in the middle</p>
+            <p>The Absolute Middle</p>
+            <p>Some stuff below the middle stuff.</p>
+        </div>
+        <p>Paragraph 5</p>
     </div>
 </body>
 </html>
